@@ -1,41 +1,48 @@
-# Polar Orbit & Coverage Simulation Tool
+# Satellite Constellation Simulator  
+**Built by Tyler Umland**
 
-A dynamic, interactive simulation for visualizing satellite constellations in low-Earth orbit (LEO), built with Python and Streamlit. This tool models orbital paths, ground coverage zones, and pass frequency over U.S. military bases.
+A web-based tool for visualizing and analyzing polar-orbiting satellite constellations over U.S. military bases. Designed with accessibility and performance in mind — no installation required.
 
-**Author:** Tyler Umland  
-**Target Audience:** Recruiters | Graduate Admissions | Industrial, Manufacturing, & Defense Professionals
+### Live Demo  
+Launch the app here:  
+[tylerumland-satellite-simulator.streamlit.app](https://tylerumland-satellite-simulator.streamlit.app)
+
+---
+
+## Overview
+
+This simulator models satellites in Low Earth Orbit (LEO) and evaluates their visibility over military bases. It is designed for:
+
+- **Mission planning** (e.g., communications, imaging, or weather observation)
+- **Base coverage analysis** (pass counts and coverage gaps)
+- **Educational or professional demonstration** of orbital mechanics
 
 ---
 
 ## Features
 
-- Configure orbit altitude, inclination, and satellite count
-- Visualize real-time polar orbits on a 3D Cesium globe
-- Compute ground coverage zones for U.S. military bases
-- Calculate pass count and longest gap per base
-- Analyze redundancy index for orbital coverage
-- Interactive filters for military branches and regions
+- Customize altitude, inclination, and number of satellites
+- Visualize orbits and coverage areas on an interactive 3D globe (Cesium.js)
+- Filter and analyze U.S. military bases by branch or region
+- Displays analytics like:
+  - Pass counts per base
+  - Longest gap in coverage
+  - Redundancy index
 
 ---
 
-## Try It Instantly
+## 📁 File Structure
 
-[Launch the app on Streamlit Cloud](#)  
-(_Link will go here once deployed — next step!_)
+| File | Purpose |
+|------|---------|
+| `app.py` | Main Streamlit app |
+| `us_bases_large.csv` | Dataset of U.S. military base coordinates |
+| `requirements.txt` | Minimal dependencies for deployment |
 
 ---
 
-## Project Structure
-📁 satellite-simulator/
-├── app.py # Main Streamlit app
-├── us_bases_large.csv # Military base location data
-└── README.md # This file
-
-```markdown
 ## How to Run Locally
 
-1. Clone the repository:
-
 ```bash
-git clone https://github.com/tylerumland/satellite-simulator.git
-cd satellite-simulator
+pip install -r requirements.txt
+streamlit run app.py
